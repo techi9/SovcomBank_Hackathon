@@ -27,24 +27,25 @@ public class Transaction {
     private double value;
     private double exchangeRate;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL, optional = false)
     @JoinColumn(name = "accounts_to", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private Account accountTo;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL, optional = false)
     @JoinColumn(name = "accounts_from", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private Account accountFrom;
 
     @ManyToMany(fetch = FetchType.LAZY,
-            cascade = {
-                    CascadeType.PERSIST,
-                    CascadeType.MERGE
-            },
+            cascade=CascadeType.ALL,
             mappedBy = "transactions")
     private Set<User> users = new HashSet<>();
+
+    public void addUser(User user) {
+        users.add(user);
+    }
 
 }

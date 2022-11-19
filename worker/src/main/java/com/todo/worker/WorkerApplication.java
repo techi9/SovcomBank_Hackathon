@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableJpaRepositories("com.todo.finance.repositories")
-@ComponentScan(basePackages = {"com.todo.finance","com.todo.worker"})
+@ComponentScan(basePackages = {"com.todo.finance", "com.todo.worker"})
 @EnableRetry
 @EnableScheduling
 public class WorkerApplication {

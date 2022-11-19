@@ -42,26 +42,26 @@ public class UserController {
         log.info(String.valueOf(credentialsRepository.findAll().size()));
 
         Credentials credentials = credentialsRepository.save(Credentials.builder()
-                .email("tqq@mail.ru")
+                .email("tqdhthq@mail.ru")
                 .phoneNumber("89312068978")
                 .build()
         );
         Passport passport = passportRepository.save(Passport.builder()
                 .name("newname")
-                        .surname("surnammme")
+                        .surname("surnamhdfmme")
                         .dateOfBirth(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S").parse("2011-01-18 00:00:00.0"))
-                        .middleName("middllllle")
+                        .middleName("midllle")
                         .passportNumber("7894561230")
                         .build());
 
         log.warn(String.valueOf(passportRepository.findAll().size()));
-        userRepository.save(User.builder()
-                .status(UserStatus.ACTIVE)
-                .role(Role.ADMIN)
-                .passport(passport)
-                .credentials(credentials)
-                .transactions(new HashSet<>())
-                .build());
+//        userRepository.save(User.builder()
+//                .status(UserStatus.ACTIVE)
+//                .role(Role.ADMIN)
+//                .passport(passport)
+//                .credentials(credentials)
+//                .transactions(new HashSet<>())
+//                .build());
         //accountRepository.save(new Account(1, "USD", "1234567890", AccountStatus.ACTIVE, 1000, 1));
 
         return userRepository.findAll();

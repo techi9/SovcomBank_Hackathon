@@ -41,10 +41,7 @@ public class User {
     private Credentials credentials;
 
     @ManyToMany(fetch = FetchType.LAZY,
-            cascade = {
-                    CascadeType.PERSIST,
-                    CascadeType.MERGE
-            })
+            cascade=CascadeType.ALL)
     @JoinTable(
             joinColumns = { @JoinColumn(name = "users_id") },
             inverseJoinColumns = { @JoinColumn(name = "transactions_id") }
