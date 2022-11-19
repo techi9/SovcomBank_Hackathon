@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: brokkko
+    password: brokkko
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+#server:
+#  servlet:
+#    context-path: /taskmanager
