@@ -1,5 +1,5 @@
-const apiUrl = 'http://localhost:3000/api';
+const apiUrlBase = 'http://localhost:3000/api';
 
-const ExchangeRatesRoute = `${apiUrl}/exchangeRates`
+const ExchangeRatesRoute = `${apiUrlBase}/exchangeRates`
 
-export default ExchangeRatesRoute
+export default {apiUrlBase, ExchangeRatesRoute}
