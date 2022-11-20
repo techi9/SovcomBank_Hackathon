@@ -5,9 +5,14 @@ import {useState} from "react";
 import PhoneField from "../../PhoneField/PhoneField";
 import {RegistrationDto} from "../../../api/dto";
 import axios from '../../../api/axious';
+import {useLocation, useNavigate} from "react-router-dom";
 
 
 function Registration() {
+
+    // const navigate = useNavigate();
+    // const location = useLocation();
+    // const from = location.state?.from?.pathname || "/";
 
     const [surname, setSurname] = useState("")
     const [name, setName] = useState("")

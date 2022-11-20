@@ -12,9 +12,9 @@ function App() {
 
   return (
     <div className="App">
-      <HeaderPublic/>
+      <HeaderPrivate/>
         <main>
-            <Registration/>
+            <PendingPage/>
         </main>
     </div>
   )
