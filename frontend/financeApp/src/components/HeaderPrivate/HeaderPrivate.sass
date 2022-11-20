@@ -1,0 +1,33 @@
+$paddingSides: 8em
+
+.header-container
+  width: 100vw
+  background: white
+
+header
+  width: calc(100vw - 2*$paddingSides)
+  display: flex
+  flex-direction: column
+  margin: 0 $paddingSides 0 $paddingSides
+
+  .top
+    width: calc(100vw - 2*$paddingSides)
+    display: flex
+    justify-content: space-between
+
+    div
+      display: flex
+      flex-wrap: nowrap
+
+  .bot
+    display: flex
+    width: calc(100vw - 2*$paddingSides)
+    gap: 2em
+
+    border-width: 1px 0 0 0
+    border-style: solid
+    border-color: #D3D3D3
+
+    section
+      margin: 0.5em 0 0.5em 0
+      cursor: pointer
