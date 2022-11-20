@@ -19,7 +19,7 @@ public class Credentials {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Pattern(regexp = "^(\\+7|8)\\d{10}$")
+    @Pattern(regexp = "^(7-8)\\d{10}$")
     private String phoneNumber;
 
     @Pattern(regexp = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}$")

@@ -1,4 +1,4 @@
-package com.todo.finance.services;
+package com.todo.finance.services.mappers;
 
 import com.todo.finance.model.Transaction;
 import com.todo.finance.model.TransactionTask;

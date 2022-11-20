@@ -10,4 +10,4 @@ spring:
 
 #server:
 #  servlet:
-#    context-path: /taskmanager
+#    context-path: /api/v1

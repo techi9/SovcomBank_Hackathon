@@ -8,5 +8,5 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @Transactional
 public interface UserRepository extends JpaRepository<User, Integer> {
-
+    public User findByCredentials_PhoneNumber(String phoneNumber);
 }
